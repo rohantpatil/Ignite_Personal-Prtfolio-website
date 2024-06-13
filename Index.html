@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohant Patil - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Rohant Patil</h1>
+        <p>Software Developer</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#resume">Resume/CV</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <img src="photo.jpg" alt="rohantpatil">
+            <p>Hi, I'm Rohant Patil, a passionate software developer with expertise in full-stack development. I have a degree in Computer Science from Rani Channamma University and have worked on various exciting projects.</p>
+        </section>
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <div class="project">
+                <h3>Project Title 1</h3>
+                <p>Description of the project. Technologies used: HTML, CSS, JavaScript.</p>
+                <a href="https://github.com/rohantpatil/Ignite_Langing_Page12/tree/Ignite_Landing_Page" target="_blank">View on GitHub</a>
+            </div>
+            <div class="project">
+                <h3>Project Title 2</h3>
+                <p>Description of the project. Technologies used: HTML, CSS, JavaScript.</p>
+                <a href="https://github.com/rohantpatil/Job_board_platform" target="_blank">View on GitHub</a>
+            </div>
+        </section>
+        <section id="resume">
+            <h2>Resume/CV</h2>
+            <a href="Resume.docx" download>Download My Resume/CV</a>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+            <p>Contact Number: <a href="tel:+1234567890">+91 9823456098</a></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 John Doe. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+<script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    if (name && email && message) {
+        alert('Thank you for your message!');
+        // You can add your form submission logic here, such as sending the data to a server
+    } else {
+        alert('Please fill out all fields.');
+    }
+});
+</script>
+</body>
+</html>
